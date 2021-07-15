@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:kings_chat/screens/login_screen.dart';
+import 'package:kings_chat/screens/registration_screen.dart';
 
 class WelcomeScreen extends StatefulWidget {
   static const String id = 'welcome_screen';
@@ -45,7 +47,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                 child: MaterialButton(
                   onPressed: () {
                     //Go to login screen.
-                    Navigator.pushNamed(context, 'login_screen');
+                    Navigator.pushNamed(context, LoginScreen.id);
                   },
                   minWidth: 200.0,
                   height: 42.0,
@@ -64,6 +66,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                 child: MaterialButton(
                   onPressed: () {
                     //Go to registration screen.
+                    Navigator.pushNamed(context, RegistrationScreen.id);
                   },
                   minWidth: 200.0,
                   height: 42.0,
