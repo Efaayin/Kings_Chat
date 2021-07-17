@@ -77,13 +77,6 @@ class _WelcomeScreenState extends State<WelcomeScreen>
                     speed: Duration(milliseconds: 100),
                   ),
                 ]),
-                // Text(
-                //   'Kings Chat',
-                //   style: TextStyle(
-                //     fontSize: 45.0,
-                //     fontWeight: FontWeight.w900,
-                //   ),
-                // ),
               ],
             ),
             SizedBox(
@@ -97,7 +90,6 @@ class _WelcomeScreenState extends State<WelcomeScreen>
                 borderRadius: BorderRadius.circular(30.0),
                 child: MaterialButton(
                   onPressed: () {
-                    //Go to login screen.
                     Navigator.pushNamed(context, LoginScreen.id);
                   },
                   minWidth: 200.0,
@@ -108,6 +100,11 @@ class _WelcomeScreenState extends State<WelcomeScreen>
                 ),
               ),
             ),
+            // RoundedButton(
+            //   color: Colors.lightBlueAccent,
+            //   title: 'Log In',
+            //   onPressed: Navigator.pushNamed(context, LoginScreen.id),
+            // ),
             Padding(
               padding: EdgeInsets.symmetric(vertical: 16.0),
               child: Material(
@@ -133,3 +130,53 @@ class _WelcomeScreenState extends State<WelcomeScreen>
     );
   }
 }
+
+class RoundedButton extends StatelessWidget {
+  RoundedButton(
+      {required this.color, required this.title, required this.onPressed});
+
+  late Color color;
+  late String title;
+  late var onPressed;
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: EdgeInsets.symmetric(vertical: 16.0),
+      child: Material(
+        elevation: 5.0,
+        color: color,
+        borderRadius: BorderRadius.circular(30.0),
+        child: MaterialButton(
+          onPressed: onPressed,
+          minWidth: 200.0,
+          height: 42.0,
+          child: Text(
+            title,
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+
+// Padding(
+//       padding: EdgeInsets.symmetric(vertical: 16.0),
+//       child: Material(
+//         elevation: 5.0,
+//         color: Colors.lightBlueAccent,
+//         borderRadius: BorderRadius.circular(30.0),
+//         child: MaterialButton(
+//           onPressed: () {
+//             //Go to login screen.
+//             Navigator.pushNamed(context, LoginScreen.id);
+//           },
+//           minWidth: 200.0,
+//           height: 42.0,
+//           child: Text(
+//             'Log In',
+//           ),
+//         ),
+//       ),
+//     );
