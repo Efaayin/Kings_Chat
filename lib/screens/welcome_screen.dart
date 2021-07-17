@@ -1,3 +1,4 @@
+import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:kings_chat/screens/login_screen.dart';
 import 'package:kings_chat/screens/registration_screen.dart';
@@ -11,7 +12,6 @@ class WelcomeScreen extends StatefulWidget {
 
 class _WelcomeScreenState extends State<WelcomeScreen>
     with SingleTickerProviderStateMixin {
-  
   late AnimationController controller;
   late Animation animation;
 
@@ -23,11 +23,12 @@ class _WelcomeScreenState extends State<WelcomeScreen>
       duration: Duration(seconds: 1),
     );
 
-    animation = ColorTween(begin: Colors.blueGrey, end: Colors.white).animate(controller);
+    animation = ColorTween(begin: Colors.blueGrey, end: Colors.white)
+        .animate(controller);
 
     controller.forward();
 
-    // animation.addStatusListener((status) { 
+    // animation.addStatusListener((status) {
     //   if (status == AnimationStatus.completed) {
     //     controller.reverse(from: 1.0);
     //   } else if (status == AnimationStatus.dismissed) {
@@ -63,16 +64,26 @@ class _WelcomeScreenState extends State<WelcomeScreen>
                   tag: 'logo',
                   child: Container(
                     child: Image.asset('images/logo.png'),
-                    height: 60,
+                    height: controller.value * 60,
                   ),
                 ),
-                Text(
-                  'Kings Chat',
-                  style: TextStyle(
-                    fontSize: 45.0,
-                    fontWeight: FontWeight.w900,
+                AnimatedTextKit(animatedTexts: [
+                  TypewriterAnimatedText(
+                    'Kings Chat',
+                    textStyle: TextStyle(
+                      fontSize: 45.0,
+                      fontWeight: FontWeight.w900,
+                    ),
+                    speed: Duration(milliseconds: 100),
                   ),
-                ),
+                ]),
+                // Text(
+                //   'Kings Chat',
+                //   style: TextStyle(
+                //     fontSize: 45.0,
+                //     fontWeight: FontWeight.w900,
+                //   ),
+                // ),
               ],
             ),
             SizedBox(
