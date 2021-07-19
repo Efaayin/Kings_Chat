@@ -6,7 +6,7 @@ class RoundedButton extends StatelessWidget {
 
   final Color color;
   final String title;
-  final String onPressed;
+  final VoidCallback onPressed;
 
   @override
   Widget build(BuildContext context) {
@@ -17,9 +17,7 @@ class RoundedButton extends StatelessWidget {
         color: color,
         borderRadius: BorderRadius.circular(30.0),
         child: MaterialButton(
-          onPressed: () {
-            Navigator.pushNamed(context, onPressed);
-          },
+          onPressed: onPressed,
           minWidth: 200.0,
           height: 42.0,
           child: Text(
