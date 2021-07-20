@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "356185060184",
+    "project_id": "kings-chat-7be49",
+    "storage_bucket": "kings-chat-7be49.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:356185060184:android:5614d21e07c1e59aecab2d",
+        "android_client_info": {
+          "package_name": "com.Efaayin.kings_chat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "356185060184-lfaqbtqar7ge4rhrv92df8hjm1vo4f45.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBvpOakOTJER3xe2PfHiHAos7Ve9p1UlXA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "356185060184-lfaqbtqar7ge4rhrv92df8hjm1vo4f45.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
