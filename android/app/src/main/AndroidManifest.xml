@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.kings_chat">
+    package="com.Efaayin.kings_chat">
    <application
         android:label="kings_chat"
         android:icon="@mipmap/ic_launcher">

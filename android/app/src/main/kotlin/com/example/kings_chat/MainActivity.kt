@@ -1,4 +1,4 @@
-package com.example.kings_chat
+package com.Efaayin.kings_chat
 
 import io.flutter.embedding.android.FlutterActivity
 
