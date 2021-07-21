@@ -23,6 +23,7 @@ class KingsChat extends StatelessWidget {
         RegistrationScreen.id: (context) => RegistrationScreen(),
         ChatScreen.id: (context) => ChatScreen(),
       },
+      debugShowCheckedModeBanner: false,
     );
   }
 }
