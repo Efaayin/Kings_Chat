@@ -4,7 +4,6 @@ import 'package:kings_chat/components/rounded_button.dart';
 import 'package:kings_chat/constants.dart';
 import 'package:kings_chat/screens/chat_screen.dart';
 import 'package:loading_overlay/loading_overlay.dart';
-// import 'package:modal_progress_hud/modal_progress_hud.dart';
 
 class RegistrationScreen extends StatefulWidget {
   static const String id = 'registration_screen';
@@ -81,8 +80,15 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                     if (newUser != null) {
                       Navigator.pushNamed(context, ChatScreen.id);
                     }
+
+                    setState(() {
+                      showSpinner = false;
+                    });
                   } catch (e) {
                     print(e);
+                    setState(() {
+                      showSpinner = false;
+                    });
                   }
                 },
               ),
